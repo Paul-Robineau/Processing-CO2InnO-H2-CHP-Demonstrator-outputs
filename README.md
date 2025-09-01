@@ -8,7 +8,7 @@ The associated scientific article will be linked as soon as it is published.
 
 This repository contains the Jupyter Notebooks allowing to process numerical outputs of a TEA (Techno-Economic Assessment) OpenModelica model which code is also available in Github under the name [CO2InnO-H2-CHP-Demonstrator](https://github.com/IKKUengine/CO2InnO-H2-CHP-Demonstrator). It is used for the study of decentralized energy systems (DES) based on hydrogen use (H₂) and using H₂ in an internal combustion engine for combined heat & power (ICE-CHP). 
 
-The processing is required order to extract relevant data for a LCA (Life-Cycle Assessment) study of the system modeled from a TEA approach. The results dataset of the LCIA and the dedicated processing notebooks are hosted in a companion repository.
+The processing is required order to extract relevant data for a LCA (Life-Cycle Assessment) study of the system modeled from a TEA approach and allow to interactively generate relevant visualizations. The results dataset of the LCA and the dedicated processing notebooks are hosted in a companion repository.
 
 ## System model boundaries
 
@@ -41,7 +41,7 @@ As the central element, the heating system was dimensioned based on economic op
 
 ## Data origin and uncertainties
 
-As part of the CO2InnO project, the city of Offenburg (Germany) provided hourly heat and electricity demand data over one year for five buildings. These buildings were modeled as a single system with shared infrastructure, based on simplifying assumptions agreed upon by project partners. Weather inputs were sourced from the open-source CBA Clima tool [Betti et al., 2024](https://doi.org/10.1007/s12273-023-1090-5), using data from nearby Strasbourg (France) due to the absence of a dedicated Offenburg dataset. Mass and energy flows derived from simulations depend on quality of the OpenModelica model. Since the system design centers on a ICE-CHP unit and a proton-exchange membrane electrolyzer (PEMEL), these components’ models were validated in the original TEA study [Beerlage et al., 2024](https://doi.org/10.3384/ecp20780 ). The average relative deviation was ~10% between model and lab measurements for the PEMEL, and 1-4% compared to manufacturer specifications or the Hofner model for the ICE-CHP unit.
+As part of the [CO2InnO project](https://co2inno.com/), the city of Offenburg (Germany) provided hourly heat and electricity demand data over one year for five buildings. These buildings were modeled as a single system with shared infrastructure, based on simplifying assumptions agreed upon by project partners. Weather inputs were sourced from the open-source CBA Clima tool [Betti et al., 2024](https://doi.org/10.1007/s12273-023-1090-5), using data from nearby Strasbourg (France) due to the absence of a dedicated Offenburg dataset. Mass and energy flows derived from simulations depend on quality of the OpenModelica model. Since the system design centers on a ICE-CHP unit and a proton-exchange membrane electrolyzer (PEMEL), these components’ models were validated in the original TEA study [Beerlage et al., 2024](https://doi.org/10.3384/ecp20780 ). The average relative deviation was ~10% between model and lab measurements for the PEMEL, and 1-4% compared to manufacturer specifications or the Hofner model for the ICE-CHP unit.
 
 ## Structure & How to use
 
@@ -66,6 +66,8 @@ These `pickle` files contains the different subdatasets used in the pipeline aft
 ## Requirements
 
 ### Python environment manager
+
+Note: the notebooks were tested on Python 3.11.
 
 We suggest you to use Miniconda:
 
